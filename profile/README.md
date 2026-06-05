@@ -42,6 +42,26 @@ installation notes for modern AI agent environments.
 | [DocStruct](https://github.com/aetox-skills/docstruct) | Project documentation is duplicated, unclear, oversized, or hard for agents to continue from. | Source-of-truth documentation structure, ownership rules, compact docs, and cleanup guidance. |
 | [Aetox Skills Catalog](https://github.com/aetox-skills/aetox-skills) | You want the central index, routing guidance, and release direction for the skill family. | Skill selection guidance and links to the current Aetox skill repositories. |
 
+## See The Skills In Motion
+
+### Senior Architect Agent
+
+<img src="assets/senior-architect-agent.gif" alt="Senior Architect Agent animation showing inspect, map, question, and handoff workflow" width="880">
+
+Map the real system before the agent edits code.
+
+### Idea To Architecture Agent
+
+<img src="assets/idea-to-architecture-agent.gif" alt="Idea To Architecture Agent animation showing raw idea, questions, options, and proposal workflow" width="880">
+
+Turn a raw idea into a reviewable architecture proposal.
+
+### DocStruct
+
+<img src="assets/docstruct.gif" alt="DocStruct animation showing documentation audit, routing, cleanup, and continuation workflow" width="880">
+
+Keep project documentation small, owned, and reusable.
+
 ## Choose The Right Skill
 
 ```text
