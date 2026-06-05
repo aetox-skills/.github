@@ -46,19 +46,19 @@ installation notes for modern AI agent environments.
 
 ### Senior Architect Agent
 
-<img src="assets/senior-architect-agent.gif" alt="Senior Architect Agent animation showing inspect, map, question, and handoff workflow" width="880">
+<img src="assets/senior-architect-agent.gif" alt="Senior Architect Agent animation showing inspect, map, question, and handoff workflow" width="980">
 
 Map the real system before the agent edits code.
 
 ### Idea To Architecture Agent
 
-<img src="assets/idea-to-architecture-agent.gif" alt="Idea To Architecture Agent animation showing raw idea, questions, options, and proposal workflow" width="880">
+<img src="assets/idea-to-architecture-agent.gif" alt="Idea To Architecture Agent animation showing raw idea, questions, options, and proposal workflow" width="980">
 
 Turn a raw idea into a reviewable architecture proposal.
 
 ### DocStruct
 
-<img src="assets/docstruct.gif" alt="DocStruct animation showing documentation audit, routing, cleanup, and continuation workflow" width="880">
+<img src="assets/docstruct.gif" alt="DocStruct animation showing documentation audit, routing, cleanup, and continuation workflow" width="980">
 
 Keep project documentation small, owned, and reusable.
 
