@@ -1,110 +1,54 @@
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/290514512?v=4" width="96" alt="Aetox Skills logo">
 
-  <h1>Aetox Skills</h1>
+  <h2>Aetox Skills</h2>
 
-  <p>
-    <strong>Practical AI agent skills for software builders.</strong>
-  </p>
+  <p><strong>AI agent skills from Aetox — one behaviour package per moment where a fast agent gets it wrong.</strong></p>
 
-  <p>
-    Reusable behavior packages that help AI agents inspect before acting,
-    document what matters, preserve intent, mark uncertainty, and leave useful
-    handoff context for the next human or agent.
-  </p>
-
-  <p>
-    <a href="https://github.com/aetox-skills/aetox-skills"><img alt="Skill catalog" src="https://img.shields.io/badge/catalog-aetox--skills-2ea8ff?style=for-the-badge"></a>
-    <a href="https://github.com/aetox-skills/aetox-skills/blob/main/LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge"></a>
-    <img alt="Built for AI agents" src="https://img.shields.io/badge/built%20for-AI%20agents-111827?style=for-the-badge">
-  </p>
+  <p>Writing code and checking code are two different skills here, and both were measured.</p>
 </div>
 
 ---
 
-## Skills That Make Agents Slower In The Right Places
+> **93.3% / 97.8% secure code on CWEval** with [`aetox-security`](https://github.com/aetox-skills/aetox-security) switched on, against **68.9% / 77.8%** for the next-best harness without it — 11 tasks × 2 OpenAI models × 3 rounds, hidden tests, the same model both ways.
+> Method, reports and raw runs: [Mikedev115/Aetox-Harness](https://github.com/Mikedev115/Aetox-Harness).
 
-Most AI coding workflows optimize for speed. Aetox Skills focuses on the
-moments where going slower prevents expensive mistakes: understanding an
-existing system, turning a raw idea into a reviewable architecture, and keeping
-project documentation clean enough for repeated agent work.
+## The pair
 
-These are not random prompt snippets. Each skill is a portable agent behavior
-package with a clear purpose, operating rules, templates, examples, and
-installation notes for modern AI agent environments.
+| Skill | When | What it does |
+|:--|:--|:--|
+| [`aetox-security`](https://github.com/aetox-skills/aetox-security) | the code is being written | Names the weakness each unit takes in (CWE id and name), takes the standard defense, keeps the contract the code promised, then runs the attack and an input the contract accepts. |
+| [`aetox-security-audit`](https://github.com/aetox-skills/aetox-security-audit) | the code already exists | A threat model first, then read-only hunters per unit, a critic that names the units nobody covered, and fresh verifiers that try to refute every finding. Two sizes: a diff answered in the chat, or a whole project with a run folder. |
 
-## Featured Skills
+<sub>Split at the verb on purpose, so the review rules never leak into the writing pass.</sub>
 
-| Skill | Use it when | What it produces |
-| --- | --- | --- |
-| [Senior Architect Agent](https://github.com/aetox-skills/senior-architect-agent) | An agent needs to map an existing codebase, review architecture boundaries, or prepare safe handoff notes. | Architecture maps, Mermaid diagrams, risks, open questions, and future-agent context. |
-| [Idea To Architecture Agent](https://github.com/aetox-skills/idea-to-architecture-agent) | You have a raw product idea, feature request, or business goal with no implementation yet. | A question-first architecture proposal with assumptions, options, workflows, risks, and approval points. |
-| [DocStruct](https://github.com/aetox-skills/docstruct) | Project documentation is duplicated, unclear, oversized, or hard for agents to continue from. | Source-of-truth documentation structure, ownership rules, compact docs, and cleanup guidance. |
-| [Aetox Skills Catalog](https://github.com/aetox-skills/aetox-skills) | You want the central index, routing guidance, and release direction for the skill family. | Skill selection guidance and links to the current Aetox skill repositories. |
+## The rest of the family
 
-## See The Skills In Motion
-
-### Senior Architect Agent
-
-<img src="assets/senior-architect-agent.gif" alt="Senior Architect Agent animation showing inspect, map, question, and handoff workflow" width="980">
-
-Map the real system before the agent edits code.
-
-### Idea To Architecture Agent
-
-<img src="assets/idea-to-architecture-agent.gif" alt="Idea To Architecture Agent animation showing raw idea, questions, options, and proposal workflow" width="980">
-
-Turn a raw idea into a reviewable architecture proposal.
-
-### DocStruct
-
-<img src="assets/docstruct.gif" alt="DocStruct animation showing documentation audit, routing, cleanup, and continuation workflow" width="980">
-
-Keep project documentation small, owned, and reusable.
-
-## Choose The Right Skill
-
-```text
-Existing codebase or system evidence?
-  -> senior-architect-agent
-
-Only a raw idea, product concept, or business goal?
-  -> idea-to-architecture-agent
-
-Documentation structure, duplication, ownership, or token cost?
-  -> docstruct
-
-Not sure?
-  -> start with the Aetox Skills catalog
-```
+| Skill | When |
+|:--|:--|
+| [`senior-architect-agent`](https://github.com/aetox-skills/senior-architect-agent) | An agent is about to work in a system it did not write: boundaries, risks, handoff notes. |
+| [`idea-to-architecture-agent`](https://github.com/aetox-skills/idea-to-architecture-agent) | There is a raw idea and no code: questions first, then a reviewable architecture proposal. |
+| [`docstruct`](https://github.com/aetox-skills/docstruct) | Documentation has started duplicating itself: one source of truth, less of it. |
+| [`deep-study`](https://github.com/aetox-skills/deep-study) | Something has to be understood properly, not skimmed: a textbook-depth pass over a repo, concept, paper or system. |
+| [`create-agent`](https://github.com/aetox-skills/create-agent) | An agent is about to be built: the scope is decided before anything else. |
 
 ## Install
 
-Install each skill from its own repository:
-
-```text
-aetox-skills/senior-architect-agent
-aetox-skills/idea-to-architecture-agent
-aetox-skills/docstruct
+```bash
+plugin_install("https://github.com/aetox-skills/aetox-security")
 ```
 
-Each repository includes `SKILL.md`, `INSTALL.md`, adapter notes, examples, and
-platform-specific guidance where useful.
+Or copy `SKILL.md` and `references/` beside it into your agent's skill folder. Every repository carries `README.md`, `INSTALL.md` and `CHANGELOG.md`, and the agents that read these files are not one vendor's — the steps that need a specific tool name say so in the skill itself.
 
-## Principles
+## One name, one skill
 
-- Inspect before acting.
-- Preserve user intent.
-- Prefer clear boundaries over clever abstractions.
-- Update existing documentation before creating more.
-- Mark assumptions, inferences, unknowns, risks, and decisions explicitly.
-- Treat Markdown and Mermaid as durable sources of truth.
-- Make outputs useful for both humans and future AI agents.
+A skill's name is its repository name: `aetox-security` lives at `aetox-skills/aetox-security`. There is no second name for anything on this page — if you are told a skill here is called something this page and the [catalog](https://github.com/aetox-skills/aetox-skills) do not list, that name is a guess. The catalog is the one index; it carries what each skill is for, when not to use it, and its current status.
+
+## Numbers
+
+Every figure stated in this organization names the model it was measured on and the test that produced it, and links the report. A skill with no such figure says so instead of implying one — a measured claim you cannot check is worse than no claim.
 
 ## Built By
 
-Aetox Skills is developed by Mike at Aetox, an independent AI systems lab in
-Thailand.
-
-- Website: [aetox.vercel.app/th](https://aetox.vercel.app/th)
-- Email: [aetoxcompany@gmail.com](mailto:aetoxcompany@gmail.com)
+Mike at Aetox, an independent AI systems lab in Thailand.
+[Website](https://aetox.vercel.app/th) · [Catalog](https://github.com/aetox-skills/aetox-skills) · [Skill template](https://github.com/aetox-skills/skill-template)
